@@ -1,7 +1,8 @@
 html5版 音乐播放器
 ======
 
-html5版本音乐播放器，支持iOS设备
+html5版本音乐播放器，支持iOS设备，[演示地址](http://127.0.0.1/sae-svn/qdemo/4/html5/chrome/)
+
 
 #### 功能说明
 > * 支持iOS设备，但是iOS不支持自动下一曲，这是iOS本身限制，支持touch事件
