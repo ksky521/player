@@ -1,7 +1,7 @@
 html5版 音乐播放器
 ======
 
-html5版本音乐播放器，支持iOS设备，[演示地址](http://127.0.0.1/sae-svn/qdemo/4/html5/chrome/)
+html5版本音乐播放器，支持iOS设备，[演示地址](http://4.qdemo.sinaapp.com/html5/chrome/)
 
 
 #### 功能说明
