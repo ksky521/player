@@ -21,7 +21,8 @@ withjQuery里面是jquery版本的播放器，之前只是想模仿下亦歌，�
 		data:{}//歌曲信息：作者、歌手、长度；有些lrc不会包括此部分，或者不全
 	}
 然后循环去除word（歌词）和time（歌词对应时间），生成html，其中会计算出来marginTop位置：
-	&ltp data-lrctime="time" data-lrctop="top">word&lt;/p>
+
+	&lt;p data-lrctime="time" data-lrctop="top">word&lt;/p>
 
 当歌曲播放时，实时获取当前播放时间audio.currentTime（为了提高歌词响应速度会提前100ms），然后遍历歌词nodelist，通过计算data-lrctime，取出当前播放进度对应的P元素，根据此P元素data-lrctop设置marginTop，通过css3实现动画。
 
