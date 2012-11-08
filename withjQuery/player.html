@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html manifest="cache.manifest"> 
+<head>
+	<meta charset="UTF-8">
+	<title>html5 播放器 by theowang @三水清</title>
+	<link rel="stylesheet" href="../../reset.css" />
+	<link rel="stylesheet" href="css/player.css?t=201206160123" />
+</head>
+<body>
+	<div id="all">
+		<div id="main">
+			<div id="loading"><span class="loadico"></span><p>正在努力的加载ing...<br/>最佳支持浏览器：chrome 19+</p></div>
+			<div id="playMain">
+				<div class="playerContainer" id="playerContainer">
+	                <audio id="player" preload="preload">
+	                </audio>
+	            </div>
+				<header class="controls clearfix">
+                    <ul class="control">
+                    	<li id="playBtn"><a href="#" onclick="return false;" class="icon icoplay" title="播放/暂停"></a></li>
+					   <li id="nextBtn"><a href="#" onclick="return false;" class="icon iconext" title="下一首"></a></li>
+					</ul>
+					<section class="progress">
+						<section id="progressContent" title="亲,拖动改变播放进度哦">
+							<p id="progress"></p>
+                            <p id="timer"></p>
+						</section>
+					</section>
+					<section class="vol">
+					   <a href="###" onclick="return false;" id="volicon" class="icon icovol fl"></a>
+					   <section id="vol" class="fl" title="亲,拖动改变音量哦">
+					   	<span id="volProgress"></span>
+						<a href="##" onclick="return false;" id="volCtrl"></a>
+					   </section>
+					</section>
+                </header>
+				
+				<section class="lrc clearfix">
+					<div id="lists" class="clearfix">
+						<dl id="musics" class="fl">
+							<dt class="title">
+								<a href="#" onclick="return false;" id="resetListBtn" class="btn" title="显示歌词">显示歌词</a>
+								<a href="#" onclick="return false;" id="randomBtn" class="btn" title="随机打散">随机打乱</a>
+								<a href="#" onclick="return false;" id="repeatBtn" class="icon repeat" title="循环方式"></a>
+							</dt>
+							<dd>
+								<ul id="musicList">
+		                        </ul>
+							</dd>
+						</dl>
+						<dl id="lrcs" class="fl">
+							<dt class="title"><p id="title"></p><!--<a href="#" onclick="return false;" id="backMusic" class="btn" title="返回列表">返回</a>--></dt>
+							<dd id='lrcContent'>
+								
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<footer class="footer clearfix">
+					<span class="fl tips">最佳浏览器: chrome 19+ | 作者: <a href="//weibo.com/sanshuiqing" target="_blank">@三水清</a></span>
+					<a id="toggleListBtn" href="#" onclick="return false;" title="列表/歌词切换" class="icon icomusic toggleList"></a>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<div class="bubtips clearfix" id="listTips">
+        <div class="tipsContent">
+         这里切换歌词和列表哦~
+        </div>
+		<a href="javascript:;" class="close" id="close"></a>
+		<div class="tips_arrow"><em>◆</em><span>◆</span></div>
+    </div>
+	
+	<script type="text/javascript" src="../../jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.3.custom.min.js"></script>
+	<script type="text/javascript" src="js/player.js?t=201206160833"></script>
+	<script type="text/javascript" src="http://js.tongji.linezing.com/1370845/tongji.js?t=1"></script><noscript><a href="http://www.linezing.com"><img src="http://img.tongji.linezing.com/1370845/tongji.gif"/></a></noscript>
+</body>
+</html>

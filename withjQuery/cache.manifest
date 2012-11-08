@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# version 0.3
+#需缓存的文件 [可选]
+CACHE:
+17.ogg
+dqcx.ogg
+tmg.ogg
+zxmzf.ogg
+../../reset.css
+../../jquery.js
+
+NETWORK:
+*

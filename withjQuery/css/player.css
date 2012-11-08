@@ -1,0 +1,373 @@
+body{
+	background:#C0D0F6;
+	font:12px/1.5 'Microsoft Yahei',tahoma, arial, simsun, sans-serif;
+}
+#loading{
+	width:290px;
+	height:90px;
+	position:absolute;
+	text-align:center;
+	left:50%;
+	margin-top:30px;
+	margin-left:-145px;
+	color:#7AA2E5;
+	font-size:14px;
+}
+#loading span{
+	width:64px;
+	height:64px;
+	display:inline-block;
+	background:url(../img/loading.gif) no-repeat 0 0;
+}
+#playMain{
+	display:none;
+	width:290px;
+	height:370px;
+	background:#7AA2E5;
+	border-radius:5px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-145px;
+	margin-top:-185px;
+}
+
+.playerContainer{
+	display:none;
+}
+.controls,.title,.footer,.lrc{
+	width:270px;
+	padding:0 10px;
+	overflow:hidden;
+}
+
+.controls{
+	height:70px;
+	background:#88B4FF;
+	border-radius:5px 5px 0 0;
+}
+.title,.footer{
+	height:30px;
+}
+.footer{
+	text-align:right;
+}
+.lrc{
+	width:290px;
+    padding:0;
+	height:270px;
+}
+#lrcContent p{
+	text-align:center;
+	color:#FFF;
+	opacity:.5;
+    -webkit-transition: opacity 0.8s;
+	-moz-transition: opacity 0.8s;
+    -o-transition: opacity 0.8s;
+    transition: opacity 0.8s;
+}
+#lrcContent p.cur{
+	opacity:1;
+}
+
+.control,.progress,.vol{
+	height:70px;
+	float:left;
+}
+#lrcs .title{
+	background:#FFF1A8;
+	position:relative;
+	z-index:3;
+}
+#title{
+    line-height:30px;
+    text-align:center;
+}
+ul.control{
+    width:70px;
+	height:30px;
+	margin:20px 0;
+}
+ul.control li{
+	width:30px;
+	float:left;
+}
+#playBtn{
+	margin:0 5px 0 2px;
+}
+.progress{
+	margin:0 10px;
+	width:100px;
+}
+#progressContent{
+	width:100px;
+	height:20px;
+	background:#2F3E59;
+	border-radius:3px;
+	float:left;
+	margin:25px auto;
+	position:relative;
+	cursor:pointer;
+}
+#lrcContent{
+	margin:222px 10px 0;
+	width:270px;
+}
+.vol{
+	width:80px;
+}
+
+#vol{
+	width:50px;
+	height:2px;
+	background:#CCC;
+	float:left;
+	margin:34px auto;
+	position:relative;
+	cursor:pointer;
+}
+#volProgress{
+	background:#445A7F;
+	height:2px;
+	width:50%;
+	position:absolute;
+    left:0;
+    top:0;
+	z-index:1;
+}
+#progress{
+	background:#5F7DB2;
+	width:30%;
+	height:20px;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+	border-radius:3px 0 0 3px;
+}
+#timer{
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+	line-height:20px;
+	z-index:2;
+	width:100%;
+	position:absolute;
+}
+#playBtn a,#nextBtn a{
+	display:inline-block;
+}
+.icon{
+	width:30px;
+	height:30px;
+	background:url(../img/bg.png) no-repeat 0 0;
+}
+.icoplay{
+	background-position:-2px -145px;
+}
+.icopause{
+	background-position:-3px -75px;
+}
+.iconext{
+	background-position:-4px -184px;
+}
+.icoprev{
+	background-position:-5px -110px;
+}
+.icovol{
+	
+	background-position:-5px -873px;
+}
+#volicon{
+	width:16px;
+    height:16px;
+    display:inline-block;
+	margin:27px 10px 0 0;
+}
+
+#volCtrl{
+    background: white;
+    margin-left: -3px;
+    position: absolute;
+    opacity: 0;
+    width: 6px;
+    height: 6px;
+    z-index:3;
+    top:-2px;
+    left:50%;
+    border-radius: 50%;
+    -webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	-ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+#vol:hover #volCtrl{
+	opacity: 1;
+}
+.iconmute{
+	background-position:-5px -899px;
+}
+.toggleList{
+	width:20px;
+	margin-bottom:10px;
+	height:20px;
+	display:inline-block;
+}
+.icolist{
+    background-position:-10px -475px;
+}
+.icomusic{
+    background-position:-10px -509px;
+}
+.fl{
+	float:left;
+}
+#musics,#lrcs{
+	width:290px;
+	height:270px;
+	
+}
+#musics{
+	background:#D3E3FD;
+}
+#musics .title{
+	background:#7AA2E5;
+	padding:0 10px;
+	position:relative;
+}
+
+#musicList{
+	min-height:240px;
+}
+#musicList li{
+	height:24px;
+	line-height:24px;
+	padding:0 10px;
+	display:inline-block;
+	width:270px;
+	cursor:pointer;
+	-webkit-transition: all .8s;
+	-moz-transition: all .8s;
+    -ms-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s;
+}
+#musicList li.cur{
+	background:#FFF1A8;
+}
+#musicList li:hover{
+	background-color:rgba(255,241,168,.85);
+}
+#lists{
+	width:860px;
+	float:left;
+	height:270px;
+}
+#musics .btn{
+	margin:4px 10px 0 0;
+}
+.btn{
+	display:inline-block;
+	padding:2px 3px;
+	font-size:11px;
+	color:#000;
+	-webkit-text-size-adjust:none;
+	background:#E9E9E9;
+	background:-webkit-linear-gradient(top,#E9E9E9 0,#E2E2E2 100%);
+	background:-moz-linear-gradient(top,#E9E9E9 0,#E2E2E2 100%);
+	background:-ms-linear-gradient(top,#E9E9E9 0,#E2E2E2 100%);
+	background:-o-linear-gradient(top,#E9E9E9 0,#E2E2E2 100%);
+	background:linear-gradient(top,#E9E9E9 0,#E2E2E2 100%);
+	border:1px solid #000;
+	border-radius:3px;
+}
+.btn:hover{
+	text-decoration:none;
+}
+#repeatBtn{
+	background-position:-10px -425px;
+	float:right;
+	width:22px;
+	height:22px;
+	display:inline-block;
+	margin-top:4px;
+	position:relative;
+}
+a.randomPlay{
+	background-position:-10px -445px;
+}
+#repeatBtn:hover{
+}
+a.repeatOnce::after{
+	content:'1';
+	position: absolute;
+	top: -2px;
+	right: -5px;
+	font-size: 10px;
+	color:#FFF;
+	-webkit-text-size-adjust:none;
+}
+.tips{
+	line-height:30px;
+	display:inline-block;
+	color:#FFF;
+	text-shadow:1px 1px 1px rgba(0, 0, 0, .3)
+}
+#lrcs .btn{
+	position:absolute;
+	right:4px;
+	top:4px;
+}
+.bubtips{
+	display:none;
+	width:150px;
+	position:absolute;
+	left:50%;
+	margin-left:46px;
+	background:#FEFFE5;
+	border:1px solid #F9F2A7;
+	padding:3px 5px;
+	top:338px;
+	border-radius: 3px;
+}
+
+.tips_arrow {
+    position: absolute;
+	left:50%;
+	margin-left:-5px;
+	top:6px;
+}
+.tips_arrow em,.tips_arrow span{
+	font-size:21px;
+	height:10px;
+	display:block;
+	font-family:"SimSun";
+	color:#FEFFE5;
+	position:absolute;
+	top:0;
+	z-index:3;
+}
+.bubtips .tipsContent{
+	position:relative;
+	z-index:10;
+}
+.tips_arrow em{
+	top:2px;
+	color:#F9F2A7;
+	z-index:2;
+}
+.bubtips .close{
+	background: url(../img/close.gif) no-repeat 0 -11px;
+	width: 11px;
+	height: 11px;
+	position: absolute;
+	top: 7px;
+	right: 5px;
+	display: inline-block;
+	overflow: hidden;
+	z-index:15;
+}
+.footer .tips a,.footer .tips a:hover{
+	color:#FFF;
+}

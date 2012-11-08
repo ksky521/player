@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>html5 播放器</title>
+</head>
+<body>
+	<audio id="player" controls=''>
+		<source src="dqcx.ogg" />
+	</audio>
+	
+	
+	<script type="text/javascript" src="../../jquery.js"></script>
+	<script type="text/javascript">
+		var player = document.getElementById('player'), totalI = 0;
+		var lrc = $.get('dqcx.lrc',function(lrc){
+			var obj = parseLrc(lrc);
+			player.addEventListener('timeupdate', function(){
+				if(this.currentTime>0){
+					updateLrc(this.currentTime,obj);
+				}
+				
+			}, false);
+		});
+		
+		player.addEventListener('seeked',function(){
+            totalI = 0;
+        },false);
+		
+		function updateLrc(curTime,obj){
+			var words = obj.words, times = obj.times,len = times.length, i = totalI;
+			curTime = parseInt(curTime*1e3,10);
+			for(;i<len;i++){
+				var t = times[i]; 
+//				console.log(i);
+				if (curTime > t && curTime < times[i + 1]) {
+					totalI = i;
+					console.log(words[t]);
+					break;
+				}
+			}
+		}
+		
+		function parseLrc(lrc){
+			var arr = lrc.split(/[\r\n]/),len = arr.length,
+			    words = {}, times = [], i = 0;
+			for(;i<len;){
+				var str = decodeURIComponent(arr[i]),
+				word = str.replace(/\[\d*:\d*((\.|\:)\d*)*\]/g,'');
+				
+				str.replace(/\[(\d*):(\d*)([\.|\:]\d*)*\]/g,function(){
+					var min = arguments[1],sec = arguments[2],
+					   time = parseInt(min,10)*60 + parseInt(sec,10);
+					var p = times.push(time*1e3);
+					words[times[--p]] = word.trim();
+				});
+				i++;
+			}
+		  times.sort(function(a,b){return a-b;});
+           return {words:words,times:times};
+		}
+		
+	</script>
+</body>
+</html>

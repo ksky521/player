@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>html5 player by theowang|js8.in</title>
+	<link rel="stylesheet" href="css/player.css" />
+</head>
+<body>
+	<div id="all">
+		<div id="player">
+			<div class="playerContainer" id="playerContainer">
+            </div>
+			<div class="playerBg">
+				<div class="container">
+					<header>
+						<a href="#" id="play" title="播放/暂停" class="icon" onclick="return false;"><img src="img/transparent.gif" class="play" /></a>
+						<a href="#" id="next" title="下一首" class="icon" onclick="return false;"><img src="img/transparent.gif" /></a>
+						<p class="progress"><span id="progress"></span><b><time id="curTime">00:00</time>/<time id="allTime">00:00</time></b></p>
+						<a href="#" id="vol" title="静音" class="icon" onclick="return false;"><img src="img/transparent.gif" class="mute" /></a>
+					</header>
+					<section>
+						<menu>
+							<a href="#" id="lrc" title="开启/关闭歌词" class="icon" onclick="return false;"><img src="img/transparent.gif" class="Off" /></a>
+							<a href="#" id="repeat" title="循环模式" class="icon" onclick="return false;"><img src="img/transparent.gif" class="On" /></a>
+						</menu>
+						<div class="songs">
+							<div id="lists" class="lists" >
+								<div class="songsContainer fl">
+	                                <ul id="songs">
+	                                </ul>
+	                            </div>
+	                            <div class="lrcContent fl">
+	                            	<div id="lrcContent"></div>
+	                            	<!--<div class="lrcTop"></div>-->
+									<!--<div class="lrcBottom"></div>-->
+	                            </div>
+							</div>
+						</div>
+					</section>
+					<footer>
+						<form id="searchForm" action="" onsubmit="return false">
+				            <input id="q" type="text" value="" />
+				            <input type="submit" value="搜索" />
+				        </form>
+			         </footer>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--<script type="text/javascript" src="js/app1.0.js"></script>-->
+<script type="text/javascript" src="js/yplayer.js"></script>
+</body>
+</html>
