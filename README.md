@@ -12,6 +12,17 @@ html5版本音乐播放器，支持iOS设备
 #### jQuery版本
 withjQuery里面是jquery版本的播放器，之前只是想模仿下亦歌，于是就用jQ写了，后来大家反映可以搞个纯javascript的html5版本，于是出了最新的这个版本
 
+#### 简单说下歌词显示算法
+首先异步获取lrc内容（loadLrc），然后使用正则解析lrc（parseLrc），得到格式如下：
+
+	{
+		words:[],
+		times:[],
+		data:{}
+	}
+然后循环去除word（歌词）和time（歌词对应时间），生成html，其中会计算出来marginTop位置：
+	<p data-lrctime="time" data-lrctop="top">word</p>
+当歌曲播放时，实时获取当前播放时间audio.currentTime（为了提高歌词响应速度会提前100ms），然后遍历歌词nodelist，通过计算data-lrctime，取出当前播放进度对应的P元素，根据此P元素data-lrctop设置marginTop，通过css3实现动画。
 
 ## 版本库地址
 
