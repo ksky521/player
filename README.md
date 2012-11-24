@@ -48,6 +48,8 @@ withjQuery里面是jquery版本的播放器，之前只是想模仿下亦歌，�
 作者新浪微博：[@三水清](http://weibo.com/sanshuiqing)
 
 
-
 ## 特别鸣谢
 感谢[@aricme](http://weibo.com/aricme)哥们周末帮我设计html5操作界面
+
+## LICENCE
+* 本软件采用 `BSD` 开源协议，细节请阅读项目中的 `LICENSE.BSD` 文件内容。
